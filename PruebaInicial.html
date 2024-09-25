@@ -6,11 +6,43 @@
 	<title>Datos Personales</title>
 </head>
 <body>
-  <!-- Encabezado -->
+  <h1>Auto Do it</h1>
+
+  <br> <p>Es una tienda online se utiliza <b>dropshipping</b> para enlazar con ciertos productos en tiendas online como amazon y aliexpress.
+<br>Nuestros productos son del sector de la automoción para el aftermarket. Cada producto irá asociado de un video subido a YouTube, con un breve tutorial grabado por nosotros.
+<br> Estos productos serán sólo aquellos que podemos instalar por nosotros mismos en nuestro vehículo, sin la ayuda de un profesional.
+<br>Destacamos:</p>
+
+<ol>
+    <li>Limpiaparabrisas</li>
+    <li>Resortes para capó o maletero</li>
+    <li>Fusibles</li>
+    <li>Ambientadores</li>
+    <li>Espejos retrovisores</li>
+    <li>Bombillas para los faros</li>
+    <li>Tapacubos</li>
+    <li>Líquido refrigerante</li>
+    <li>Aceite de motor (no nos hacemos responsables de su correspondiente recogida)</li>
+    <li>Filtros</li>
+  </ol>
+
 <h2>Problema </h2>
+<p>
+    En la tienda online, tenemos un problema con el inicio de sesión. <br>
+    Esto se debe a que la base de datos no está codificada en utf-8, y aquellos usuarios españoles que tienen una "ñ" en su apellido, no logran crear un usuario.
+<br>
+    La solución sería reestructurar la Base de datos, poniendo el formato adecuado, o en su defecto, lanzar un mensaje de aviso con los caracteres permitidos para el registro 
+    de los usuarios y su posterior inicio de sesión.
+<br>
+Para aquellos a los que no les de problemas, el sistema de registro seguirá corrientemente.
+<br> En los casos en los que el usuario introduzca un carácter no permitido en el nombre de usuario, nombre o apellido (ñ, ç) 
+<br> un condicional en nuestro php que lleva la información a la base de datos impedirá su correcto insert en ésta, pidiéndonos mediante un alert, que usemos 
+caracteres permitidos.
+<br> Éste condicional no permitirá que avanzamos en el registro de usuario, o el login, hasta que no introduzcamos el formato permitido.
+<br> Tendrá un boolean llamado caracterCorrecto, que será el encargado de dar bandera verde a la entrada de registro de datos, tras analizar la cadena de String que el usuario inserta y envía.
+    <br>
+</p>
 
-
-<p>problema tienda</p>
 
 
 </body>
